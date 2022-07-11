@@ -3,16 +3,24 @@ package co.com.famisanar.msaafiliaciones.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class MunicipioVO implements java.io.Serializable {
 
-    private static final long serialVersionUID = -9145529635180582922L;
-
-    private String id;
+    private MunicipioId id;
+    private DeptoVO depto;
     private String munNombre;
-    private List<DeptoVO>  depto;
-  }
+    private BigDecimal munFactorupc;
+    private String munRegional;
+    private Set<AsesorVO> asesors = new HashSet<AsesorVO>(0);
+    private Set<AfiliadoVO> afiliadosForFAfiMunres = new HashSet<AfiliadoVO>(0);
+    private Set<AfiliadoVO> afiliadosForFAfiMuntra = new HashSet<AfiliadoVO>(0);
+
+}
