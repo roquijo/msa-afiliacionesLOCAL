@@ -1,6 +1,6 @@
 package co.com.famisanar.msaafiliaciones.controller;
 
-import co.com.famisanar.msaafiliaciones.model.Prueba;
+import co.com.famisanar.msaafiliaciones.model.AfiliadoVO;
 import co.com.famisanar.msaafiliaciones.service.PruebaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -22,7 +22,7 @@ public class PruebaController {
 
     @GetMapping
     @Operation(summary = "Consulta de todas las pruebas")
-    public ResponseEntity<List<Prueba>> getPruebas() {
+    public ResponseEntity<List<AfiliadoVO>> getPruebas() {
         return ResponseEntity.ok(pruebaService.getPruebas());
     }
 }
